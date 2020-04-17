@@ -1,0 +1,53 @@
+import java.util.*;
+
+ // Compiler version JDK 11.0.2
+
+ class Dcoder
+ {
+   public static void main(String args[]){
+     
+   
+         Scanner Teclado=new Scanner(System.in);
+            int opt,n=0,tope=0,ran;
+            System.out.println("imgrse el tamaño de la pila");
+            n=Teclado.nextInt();
+       char[]chr={'a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','x','w','y','z'};
+          char[] aleatorio=new char[25];
+      for(int i=0;i<=24;i++){
+            aleatorio[i]=chr[(int)(Math.random()*25)];
+   String [] letras={"a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","x","w","y","z"};
+        }
+       do {  
+            System.out.println("1-agregar");
+            System.out.println("2-mostrar");
+            System.out.println("3-eliminar");
+               System.out.println("4-salir");
+            opt = Teclado.nextInt();
+  switch (opt) {
+             case 1:
+            if (tope < n) {
+                        System.out.println("coloque una letra");
+                        aleatorio[tope] = Teclado.next().charAt(0);
+                        tope++;
+                    } else {
+                        System.out.println("pila llena");
+                        }break;
+              case 2:           
+                    if (tope > 0) { 
+                        for (int i = 0; i < n; i++) {
+                           ran=chr[(int)(Math.random()*25)];
+                            System.out.println(" " + aleatorio[i]); 
+                        }
+                    }  
+                    break; 
+                case 3:
+                        if (tope <= n) { 
+                        for (int i = 0; i < n-1; i++) {
+                           ran=chr[(int)(Math.random()*25)]; 
+                            System.out.println(" " + aleatorio[i]);    
+                        }
+                    } 
+                    break;                               
+        }} while (opt != 4);     
+    } 
+}
